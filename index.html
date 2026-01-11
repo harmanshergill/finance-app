@@ -16,6 +16,14 @@ button{margin-top:32px;padding:14px 28px;background:#ff6a00;color:#fff;border:no
 </style>
 </head>
 <body>
+<script>
+if(!sessionStorage.getItem('pin')){
+ sessionStorage.setItem('pin','ok');
+}else{
+ location.replace('lock.html');
+}
+</script>
+
 <div class="screen">
   <img src="icon.png" class="logo">
   <div class="spinner"></div>
@@ -23,5 +31,6 @@ button{margin-top:32px;padding:14px 28px;background:#ff6a00;color:#fff;border:no
   <p style="opacity:.7">Dit kan even duren.</p>
   <button onclick="location.href='gegevens.html'">Verder</button>
 </div>
+
 </body>
 </html>

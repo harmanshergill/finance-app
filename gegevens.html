@@ -15,9 +15,11 @@ select,button.opt{width:100%;padding:12px;margin-top:8px;border-radius:12px;bord
 </style>
 </head>
 <body>
+
 <div class="container">
 <h2>Bijna klaar</h2>
 <p style="opacity:.7">Vul nog een aantal gegevens aan.</p>
+
 <div class="card">
 <label>Selecteer welke vennoot u bent</label>
 <select id="vennoot">
@@ -26,19 +28,23 @@ select,button.opt{width:100%;padding:12px;margin-top:8px;border-radius:12px;bord
 <option>M. Singh</option>
 </select>
 </div>
+
 <div class="card">
 <label>Meldingen ontvangen?</label>
 <button class="opt" onclick="pick(this,'notif','Ja')">Ja</button>
 <button class="opt" onclick="pick(this,'notif','Nee')">Nee</button>
 </div>
+
 <div class="card">
 <label>Klopt uw vestigingsadres?</label>
 <p style="opacity:.7">Mgr Nolenslaan 846<br>3118 EE Schiedam</p>
 <button class="opt" onclick="pick(this,'adres','Ja')">Ja</button>
 <button class="opt" onclick="pick(this,'adres','Nee')">Nee</button>
 </div>
+
 <button class="primary" onclick="save()">Bevestigen</button>
 </div>
+
 <script>
 const data=JSON.parse(localStorage.getItem('setup')||'{}');
 function pick(btn,key,val){

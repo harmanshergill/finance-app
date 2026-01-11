@@ -1,7 +1,7 @@
 {
 "name":"Bankieren",
 "short_name":"Bankieren",
-"start_url":".",
+"start_url":"lock.html",
 "display":"standalone",
 "background_color":"#1f1f1f",
 "theme_color":"#ff6a00",
