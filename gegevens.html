@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bankieren</title>
+<style>
+body{margin:0;background:#1f1f1f;color:#fff;font-family:-apple-system,system-ui}
+.container{padding:24px}
+.card{background:#2a2a2a;border-radius:16px;padding:16px;margin-bottom:20px}
+label{font-size:14px}
+select,button.opt{width:100%;padding:12px;margin-top:8px;border-radius:12px;border:1px solid #444;background:#1f1f1f;color:#fff}
+.opt.active{background:#ff6a00;border-color:#ff6a00}
+.primary{width:100%;padding:16px;background:#ff6a00;border:none;border-radius:16px;color:#fff;font-size:16px}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Bijna klaar</h2>
+<p style="opacity:.7">Vul nog een aantal gegevens aan.</p>
+<div class="card">
+<label>Selecteer welke vennoot u bent</label>
+<select id="vennoot">
+<option>H. Satpal</option>
+<option>S. Satpal</option>
+<option>M. Singh</option>
+</select>
+</div>
+<div class="card">
+<label>Meldingen ontvangen?</label>
+<button class="opt" onclick="pick(this,'notif','Ja')">Ja</button>
+<button class="opt" onclick="pick(this,'notif','Nee')">Nee</button>
+</div>
+<div class="card">
+<label>Klopt uw vestigingsadres?</label>
+<p style="opacity:.7">Mgr Nolenslaan 846<br>3118 EE Schiedam</p>
+<button class="opt" onclick="pick(this,'adres','Ja')">Ja</button>
+<button class="opt" onclick="pick(this,'adres','Nee')">Nee</button>
+</div>
+<button class="primary" onclick="save()">Bevestigen</button>
+</div>
+<script>
+const data=JSON.parse(localStorage.getItem('setup')||'{}');
+function pick(btn,key,val){
+ btn.parentElement.querySelectorAll('.opt').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active'); data[key]=val;
+}
+function save(){
+ data.vennoot=document.getElementById('vennoot').value;
+ localStorage.setItem('setup',JSON.stringify(data));
+ location.href='scan.html';
+}
+</script>
+</body>
+</html>

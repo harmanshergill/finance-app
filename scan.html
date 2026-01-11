@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bankieren</title>
+<style>
+body{margin:0;background:#1f1f1f;color:#fff;font-family:-apple-system,system-ui}
+.center{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.scan{width:200px;height:120px;border:2px dashed #ff6a00;border-radius:12px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%{opacity:.4}50%{opacity:1}100%{opacity:.4}}
+</style>
+</head>
+<body>
+<div class="center">
+<h2>Identiteit verifiëren</h2>
+<div class="scan"></div>
+<p style="opacity:.7;margin-top:20px">Scan uw identiteitskaart</p>
+</div>
+<script>
+setTimeout(()=>{
+ localStorage.setItem('verified','yes');
+ location.href='klaar.html';
+},3000);
+</script>
+</body>
+</html>

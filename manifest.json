@@ -1,11 +1,9 @@
 {
-  "name":"Bankieren",
-  "short_name":"Bankieren",
-  "start_url":"index.html",
-  "display":"standalone",
-  "background_color":"#1f1f1f",
-  "theme_color":"#ff6a00",
-  "icons":[
-    {"src":"icon.png","sizes":"512x512","type":"image/png"}
-  ]
+"name":"Bankieren",
+"short_name":"Bankieren",
+"start_url":".",
+"display":"standalone",
+"background_color":"#1f1f1f",
+"theme_color":"#ff6a00",
+"icons":[{"src":"icon.png","sizes":"512x512","type":"image/png"}]
 }
