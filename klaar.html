@@ -3,22 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bankieren</title>
+<title>Goedgekeurd</title>
 <style>
 body{margin:0;background:#1f1f1f;color:#fff;font-family:-apple-system,system-ui}
 .center{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.check{
+  width:64px;height:64px;border-radius:50%;
+  background:#ff6a00;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;margin-bottom:24px
+}
 </style>
 </head>
 <body>
+
 <div class="center">
-<h2 id="naam"></h2>
-<p style="opacity:.7">
-We verifiëren nu al uw gegevens en zetten uw transacties en spaarrekening klaar.
-</p>
+  <div class="check">✓</div>
+  <h2 id="naam"></h2>
+  <p style="opacity:.7">
+    Uw identiteit is goedgekeurd.<br><br>
+    We zetten nu uw transacties en spaarrekening klaar.
+    Zodra deze zichtbaar zijn kunt u de app gebruiken.
+  </p>
 </div>
+
 <script>
 const s=JSON.parse(localStorage.getItem('setup')||'{}');
 document.getElementById('naam').textContent='Oké '+(s.vennoot||'');
 </script>
+
 </body>
 </html>
