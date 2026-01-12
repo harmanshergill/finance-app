@@ -1,11 +1,14 @@
 
-*{box-sizing:border-box}
+*{box-sizing:border-box; -webkit-tap-highlight-color: transparent}
+html,body{touch-action:manipulation}
+
 body{
   margin:0;
   background:#ffffff;
   font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
-  color:#ff7a00;
+  color:#1a1a1a;
 }
+
 .lockscreen{
   min-height:100vh;
   display:flex;
@@ -13,31 +16,37 @@ body{
   align-items:center;
   justify-content:center;
 }
+
 .logo{
   width:90px;
   height:90px;
   border-radius:22px;
   margin-bottom:24px;
 }
+
 .dots{
   display:flex;
   gap:14px;
   margin-bottom:30px;
 }
+
 .dots span{
   width:12px;
   height:12px;
   border-radius:50%;
   border:2px solid #ff7a00;
 }
+
 .dots span.filled{
   background:#ff7a00;
 }
+
 .pad{
   display:grid;
   grid-template-columns:repeat(3,80px);
   gap:18px;
 }
+
 .pad button{
   height:70px;
   font-size:28px;
@@ -45,6 +54,7 @@ body{
   border:none;
   color:#ff7a00;
 }
+
 .spinner{
   width:40px;
   height:40px;
@@ -53,6 +63,7 @@ body{
   border-radius:50%;
   animation:spin 1s linear infinite;
 }
+
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* overzicht */
@@ -63,23 +74,71 @@ body{
   align-items:center;
   justify-content:center;
   border-bottom:1px solid #e6e6e6;
+  position:relative;
 }
-.block{
-  background:#fff;
-  border-radius:12px;
-  padding:12px;
-  margin:12px;
-}
-h2{
-  font-size:14px;
+
+.back{
+  position:absolute;
+  left:16px;
+  font-size:24px;
   color:#ff7a00;
-  display:flex;
-  justify-content:space-between;
 }
-.row{
+
+.content{padding:12px}
+
+.rekening{
+  background:#fff;
+  border-radius:14px;
+  padding:16px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  box-shadow:0 1px 2px rgba(0,0,0,.04);
 }
-.sub{font-size:13px;color:#8a8a8a}
-.amount{font-weight:600;color:#1a1a1a}
+
+.rekening .left span{
+  display:block;
+  font-size:13px;
+  color:#8a8a8a;
+}
+
+.rekening .saldo{
+  font-weight:600;
+}
+
+.arrow{
+  color:#ff7a00;
+  font-size:20px;
+}
+
+/* transacties */
+.saldo-blok{
+  padding:20px;
+  border-bottom:1px solid #e6e6e6;
+}
+
+.saldo-blok .groot{
+  font-size:30px;
+  font-weight:600;
+}
+
+.saldo-blok .sub{
+  font-size:13px;
+  color:#8a8a8a;
+}
+
+.tx{
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #e6e6e6;
+}
+
+.tx span{
+  display:block;
+  font-size:13px;
+  color:#8a8a8a;
+}
+
+.plus{color:#2e7d32;font-weight:600}
+.min{color:#c62828;font-weight:600}

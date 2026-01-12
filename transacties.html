@@ -1,26 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transacties</title>
-<style>
-body{margin:0;background:#1f1f1f;color:#fff;font-family:-apple-system,system-ui}
-.header{padding:16px;font-size:18px;font-weight:600}
-.balance{padding:16px;font-size:28px}
-.list{padding:16px}
-.tx{padding:12px 0;border-bottom:1px solid #333;display:flex;justify-content:space-between}
-.amount.plus{color:#4caf50}
-.amount.min{color:#ff5252}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Betaalrekening</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">Rekeningoverzicht</div>
-<div class="balance">€ 100,97</div>
-<div class="list">
-  <div class="tx"><span>Salaris</span><span class="amount plus">+ €2.100,00</span></div>
-  <div class="tx"><span>Huur</span><span class="amount min">- €850,00</span></div>
-  <div class="tx"><span>Boodschappen</span><span class="amount min">- €120,50</span></div>
+
+<header class="topbar">
+  <span class="back" onclick="history.back()">‹</span>
+  <h1>Betaalrekening</h1>
+</header>
+
+<section class="saldo-blok">
+  <div class="groot">€ 100,97</div>
+  <div class="sub">Taj Restaurant<br>NL10 INGB 0007 6324 79</div>
+</section>
+
+<div class="tx">
+  <div>
+    <strong>Albert Heijn</strong>
+    <span>Schiedam</span>
+  </div>
+  <div class="min">- 12,45</div>
 </div>
+
+<div class="tx">
+  <div>
+    <strong>Salaris</strong>
+    <span>Bijschrijving</span>
+  </div>
+  <div class="plus">+ 2.100,00</div>
+</div>
+
 </body>
 </html>
