@@ -5,6 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #ff7a00;
 }
+
 .lockscreen {
   min-height: 100vh;
   display: flex;
@@ -12,28 +13,49 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .logo {
   width: 90px;
   height: 90px;
   border-radius: 22px;
-  margin-bottom: 25px;
+  object-fit: cover;
+  margin-bottom: 24px;
 }
+
+.fade-in {
+  animation: fadeScale 0.6s ease-out;
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .dots {
   display: flex;
   gap: 12px;
   margin-bottom: 30px;
 }
+
 .dots span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 2px solid #ff7a00;
 }
+
 .pad {
   display: grid;
   grid-template-columns: repeat(3, 80px);
   gap: 18px;
 }
+
 .pad button {
   height: 70px;
   font-size: 30px;
@@ -41,6 +63,7 @@ body {
   border: none;
   color: #ff7a00;
 }
+
 .del {
   font-size: 22px;
 }
