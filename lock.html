@@ -16,7 +16,6 @@ body{margin:0;background:#1f1f1f;color:#ff6a00;font-family:-apple-system,system-
 </style>
 </head>
 <body>
-
 <div class="lock">
   <img src="icon.png" class="logo">
   <div class="dots">
@@ -29,24 +28,20 @@ body{margin:0;background:#1f1f1f;color:#ff6a00;font-family:-apple-system,system-
     <div></div><button onclick="p(0)">0</button><button onclick="d()">⌫</button>
   </div>
 </div>
-
 <script>
 let c='';
 const ok='260400';
 const dots=document.querySelectorAll('.dots span');
-
 function u(){dots.forEach((d,i)=>d.classList.toggle('on',i<c.length))}
 function p(n){
  if(c.length>=6)return;
  c+=n;u();
  if(c.length===6){
-  if(c===ok){
-   location.href='index.html';
-  }else{c='';u();}
+  if(c===ok){location.href='klaar.html';}
+  else{c='';u();}
  }
 }
 function d(){c=c.slice(0,-1);u()}
 </script>
-
 </body>
 </html>
