@@ -1,30 +1,55 @@
 
-:root{
-  --orange:#ff7a00;
-  --text-main:#1a1a1a;
-  --text-sub:#7a7a7a;
-  --border:#e6e6e6;
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto}
+
+.app{
+  min-height:100dvh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto}
-
-body{background:#fff;color:var(--text-main)}
-.sub,.no-link{color:var(--text-sub)}
-
-.topbar{
-  height:56px;border-bottom:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:600;
+.lockscreen{
+  width:100%;
+  max-width:420px;
+  padding:32px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-.content{padding:16px}
-
-.rekening{
-  background:#fff;border-radius:14px;
-  padding:16px;display:flex;justify-content:space-between;
-  box-shadow:0 1px 3px rgba(0,0,0,.06);
+.logo{
+  width:96px;
+  height:96px;
+  border-radius:24px;
+  margin-bottom:24px;
 }
 
-.rekening:active{background:#f5f5f5}
-.arrow{color:var(--orange);font-size:20px}
+.dots{
+  display:flex;
+  gap:12px;
+  margin-bottom:28px;
+}
+
+.dots span{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  border:2px solid #ff7a00;
+}
+
+.pad{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.pad button{
+  height:64px;
+  font-size:24px;
+  background:none;
+  border:1px solid #e0e0e0;
+  border-radius:14px;
+  color:#ff7a00;
+}
