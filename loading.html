@@ -2,19 +2,23 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <title>Laden</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css?v=5">
 </head>
 <body>
-<div class="lockscreen">
-  <img src="logo.png" class="logo">
-  <div class="spinner"></div>
+<div class="app">
+  <div class="loading">
+    <div class="logo-wrap small">
+      <img src="logo.png">
+    </div>
+    <div class="spinner"></div>
+  </div>
 </div>
 <script>
-setTimeout(()=>location.href='overzicht.html',2000);
+setTimeout(()=>location.href="overzicht.html",2000);
 </script>
 </body>
 </html>
