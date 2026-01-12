@@ -12,23 +12,35 @@ html,body{margin:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,
 .lockscreen{
   width:100%;
   max-width:420px;
-  padding:32px 20px;
+  padding:32px 20px 40px;
   display:flex;
   flex-direction:column;
   align-items:center;
 }
 
-.logo{
-  width:96px;
-  height:96px;
-  border-radius:24px;
-  margin-bottom:24px;
+/* LOGO FIX */
+.logo-wrap{
+  width:84px;
+  height:84px;
+  border-radius:22px;
+  background:#ff7a00;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:26px;
 }
 
+.logo-wrap img{
+  width:64px;
+  height:64px;
+  object-fit:contain;
+}
+
+/* dots */
 .dots{
   display:flex;
   gap:12px;
-  margin-bottom:28px;
+  margin-bottom:30px;
 }
 
 .dots span{
@@ -38,6 +50,7 @@ html,body{margin:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,
   border:2px solid #ff7a00;
 }
 
+/* keypad */
 .pad{
   width:100%;
   display:grid;
