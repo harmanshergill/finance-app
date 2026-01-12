@@ -2,29 +2,23 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="color-scheme" content="light">
 <title>Overzicht</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-<header class="topbar"><h1>Overzicht</h1></header>
-
-<main class="content">
-<section class="rekening" role="button" tabindex="0"
-         onclick="location.href='transacties.html'">
-  <div class="left">
-    <strong>Betaalrekening</strong>
-    <span class="no-link">Taj Restaurant</span>
+<div class="topbar">Overzicht</div>
+<div class="content">
+  <div class="rekening" onclick="location.href='transacties.html'">
+    <div>
+      <strong>Betaalrekening</strong><br>
+      <span class="sub">Taj Restaurant</span>
+    </div>
+    <div class="arrow">›</div>
   </div>
-  <div class="right">
-    <span class="saldo">€ 100,97</span>
-    <span class="arrow">›</span>
-  </div>
-</section>
-</main>
-
+</div>
 </body>
 </html>
