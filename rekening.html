@@ -1,44 +1,38 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
-<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Betaalrekening</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<header class="header">
+<body class="light">
+<header class="top">
+  <a class="back" href="index.html">‹</a>
   <h1>Betaalrekening</h1>
 </header>
-
-<section class="saldo-card">
-  <div class="saldo-amount">€ 100,97</div>
-  <div class="saldo-sub">
-    Taj Restaurant<br>
-    NL10 INGB 0007 6324 79
-  </div>
-</section>
-
-<section class="transactions">
-  <div class="tx-row">
-    <div>
-      <div class="tx-title">ODIDO</div>
-      <div class="tx-sub">Afschrijving</div>
+<main>
+  <section class="balance">
+    <div class="amount">€ 100,97</div>
+    <div class="name">Taj Restaurant</div>
+    <div class="iban">NL10 INGB 0007 6324 79</div>
+  </section>
+  <section class="list">
+    <div class="row">
+      <div>
+        <div class="row-title">ODIDO</div>
+        <div class="row-sub">Afschrijving</div>
+      </div>
+      <div class="neg">-247,37</div>
     </div>
-    <div class="tx-amount negative">-247,37</div>
-  </div>
-
-  <div class="tx-row">
-    <div>
-      <div class="tx-title">010 Storage</div>
-      <div class="tx-sub">Afschrijving</div>
+    <div class="row">
+      <div>
+        <div class="row-title">010 Storage</div>
+        <div class="row-sub">Afschrijving</div>
+      </div>
+      <div class="neg">-468,15</div>
     </div>
-    <div class="tx-amount negative">-468,15</div>
-  </div>
-</section>
-
+  </section>
+</main>
 </body>
 </html>
