@@ -1,5 +1,5 @@
 
-*{box-sizing:border-box; -webkit-tap-highlight-color: transparent}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{touch-action:manipulation}
 
 body{
@@ -9,6 +9,14 @@ body{
   color:#1a1a1a;
 }
 
+/* Disable iOS auto-links */
+.no-link{
+  pointer-events:none;
+  color:#8a8a8a;
+  text-decoration:none;
+}
+
+/* lockscreen */
 .lockscreen{
   min-height:100vh;
   display:flex;
@@ -37,9 +45,7 @@ body{
   border:2px solid #ff7a00;
 }
 
-.dots span.filled{
-  background:#ff7a00;
-}
+.dots span.filled{background:#ff7a00}
 
 .pad{
   display:grid;
@@ -55,6 +61,7 @@ body{
   color:#ff7a00;
 }
 
+/* spinner */
 .spinner{
   width:40px;
   height:40px;
@@ -63,7 +70,6 @@ body{
   border-radius:50%;
   animation:spin 1s linear infinite;
 }
-
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* overzicht */
@@ -100,10 +106,6 @@ body{
   display:block;
   font-size:13px;
   color:#8a8a8a;
-}
-
-.rekening .saldo{
-  font-weight:600;
 }
 
 .arrow{
