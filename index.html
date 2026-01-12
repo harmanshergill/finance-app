@@ -7,7 +7,7 @@
 <meta name="format-detection" content="telephone=no,email=no,address=no">
 <meta name="color-scheme" content="light">
 <title>Bankieren</title>
-<link rel="stylesheet" href="./style.css?v=5">
+<link rel="stylesheet" href="./style.css?v=6">
 </head>
 <body>
 <div class="app">
@@ -21,40 +21,52 @@
     </div>
 
     <div class="pad">
-      <button onclick="press(1)">1</button><button onclick="press(2)">2</button><button onclick="press(3)">3</button>
-      <button onclick="press(4)">4</button><button onclick="press(5)">5</button><button onclick="press(6)">6</button>
-      <button onclick="press(7)">7</button><button onclick="press(8)">8</button><button onclick="press(9)">9</button>
-      <span></span><button onclick="press(0)">0</button><button onclick="back()">←</button>
+      <button data-n="1">1</button><button data-n="2">2</button><button data-n="3">3</button>
+      <button data-n="4">4</button><button data-n="5">5</button><button data-n="6">6</button>
+      <button data-n="7">7</button><button data-n="8">8</button><button data-n="9">9</button>
+      <span></span><button data-n="0">0</button><button data-back>←</button>
     </div>
   </div>
 </div>
 
 <script>
-let pin="";
-const correct="260400";
-function press(n){
-  if(pin.length>=6)return;
-  pin+=n;
-  update();
-  if(pin.length===6){
-    if(pin===correct){
-      window.location.href="loading.html";
+const CORRECT_PIN = "260400";
+let pin = "";
+
+const dots = document.querySelectorAll("#dots span");
+const buttons = document.querySelectorAll(".pad button");
+
+function renderDots(){
+  dots.forEach((d,i)=>{
+    if(i < pin.length){
+      d.classList.add("filled");
     }else{
-      pin="";
-      update();
-      alert("Onjuiste pincode");
+      d.classList.remove("filled");
     }
-  }
-}
-function back(){
-  pin=pin.slice(0,-1);
-  update();
-}
-function update(){
-  document.querySelectorAll(".dots span").forEach((d,i)=>{
-    d.classList.toggle("filled", i<pin.length);
   });
 }
+
+buttons.forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    if(btn.hasAttribute("data-n")){
+      if(pin.length >= 6) return;
+      pin += btn.dataset.n;
+      renderDots();
+      if(pin.length === 6){
+        if(pin === CORRECT_PIN){
+          window.location.href = "loading.html";
+        }else{
+          pin = "";
+          renderDots();
+        }
+      }
+    }
+    if(btn.hasAttribute("data-back")){
+      pin = pin.slice(0,-1);
+      renderDots();
+    }
+  });
+});
 </script>
 </body>
 </html>
