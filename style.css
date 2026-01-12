@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  background: #1f1f1f;
+  background: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #ff7a00;
 }
@@ -18,36 +18,24 @@ body {
   width: 90px;
   height: 90px;
   border-radius: 22px;
-  object-fit: cover;
-  margin-bottom: 24px;
-}
-
-.fade-in {
-  animation: fadeScale 0.6s ease-out;
-}
-
-@keyframes fadeScale {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  margin-bottom: 30px;
 }
 
 .dots {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 30px;
 }
 
 .dots span {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 2px solid #ff7a00;
+}
+
+.dots span.filled {
+  background: #ff7a00;
 }
 
 .pad {
@@ -58,12 +46,22 @@ body {
 
 .pad button {
   height: 70px;
-  font-size: 30px;
+  font-size: 28px;
   background: none;
   border: none;
   color: #ff7a00;
 }
 
-.del {
-  font-size: 22px;
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ffd1a8;
+  border-top: 4px solid #ff7a00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
