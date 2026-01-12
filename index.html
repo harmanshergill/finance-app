@@ -7,66 +7,37 @@
 <meta name="format-detection" content="telephone=no,email=no,address=no">
 <meta name="color-scheme" content="light">
 <title>Bankieren</title>
-<link rel="stylesheet" href="./style.css?v=6">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <div class="app">
   <div class="lockscreen">
-    <div class="logo-wrap">
-      <img src="logo.png" alt="logo">
-    </div>
-
-    <div class="dots" id="dots">
+    <div class="logo-wrap"><img src="logo.png"></div>
+    <div class="dots">
       <span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
-
     <div class="pad">
-      <button data-n="1">1</button><button data-n="2">2</button><button data-n="3">3</button>
-      <button data-n="4">4</button><button data-n="5">5</button><button data-n="6">6</button>
-      <button data-n="7">7</button><button data-n="8">8</button><button data-n="9">9</button>
-      <span></span><button data-n="0">0</button><button data-back>←</button>
+      <button onclick="press(1)">1</button><button onclick="press(2)">2</button><button onclick="press(3)">3</button>
+      <button onclick="press(4)">4</button><button onclick="press(5)">5</button><button onclick="press(6)">6</button>
+      <button onclick="press(7)">7</button><button onclick="press(8)">8</button><button onclick="press(9)">9</button>
+      <span></span><button onclick="press(0)">0</button><button onclick="back()">←</button>
     </div>
   </div>
 </div>
-
 <script>
-const CORRECT_PIN = "260400";
-let pin = "";
-
-const dots = document.querySelectorAll("#dots span");
-const buttons = document.querySelectorAll(".pad button");
-
-function renderDots(){
-  dots.forEach((d,i)=>{
-    if(i < pin.length){
-      d.classList.add("filled");
-    }else{
-      d.classList.remove("filled");
-    }
-  });
+let pin="";
+const correct="260400";
+const dots=document.querySelectorAll(".dots span");
+function press(n){
+ if(pin.length>=6)return;
+ pin+=n;update();
+ if(pin.length===6){
+  if(pin===correct){location.href="loading.html";}
+  else{pin="";update();}
+ }
 }
-
-buttons.forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    if(btn.hasAttribute("data-n")){
-      if(pin.length >= 6) return;
-      pin += btn.dataset.n;
-      renderDots();
-      if(pin.length === 6){
-        if(pin === CORRECT_PIN){
-          window.location.href = "loading.html";
-        }else{
-          pin = "";
-          renderDots();
-        }
-      }
-    }
-    if(btn.hasAttribute("data-back")){
-      pin = pin.slice(0,-1);
-      renderDots();
-    }
-  });
-});
+function back(){pin=pin.slice(0,-1);update();}
+function update(){dots.forEach((d,i)=>d.classList.toggle("filled",i<pin.length));}
 </script>
 </body>
 </html>
