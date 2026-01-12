@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bankieren</title>
 <style>
-body{margin:0;background:#1f1f1f;color:#ff6a00;font-family:-apple-system,system-ui}
+body{margin:0;background:#1f1f1f;color:#ff6200;font-family:-apple-system,system-ui}
 .lock{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .logo{width:96px;border-radius:24px;margin-bottom:24px}
 .dots{display:flex;gap:12px;margin-bottom:28px}
-.dots span{width:10px;height:10px;border:2px solid #ff6a00;border-radius:50%}
-.dots span.on{background:#ff6a00}
+.dots span{width:10px;height:10px;border:2px solid #ff6200;border-radius:50%}
+.dots span.on{background:#ff6200}
 .pad{display:grid;grid-template-columns:repeat(3,88px);gap:18px}
-.pad button{height:76px;font-size:30px;background:none;border:none;color:#ff6a00}
+.pad button{height:76px;font-size:30px;background:none;border:none;color:#ff6200}
 </style>
 </head>
 <body>
@@ -37,7 +37,7 @@ function p(n){
  if(c.length>=6)return;
  c+=n;u();
  if(c.length===6){
-  if(c===ok){location.href='klaar.html';}
+  if(c===ok){location.href='overzicht.html';}
   else{c='';u();}
  }
 }
