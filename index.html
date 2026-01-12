@@ -8,7 +8,15 @@
 <meta name="color-scheme" content="light">
 <title>Bankieren</title>
 <link rel="stylesheet" href="./style.css">
+
+<link rel="manifest" href="./manifest.json">
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js");
+}
+</script>
 </head>
+
 <body>
 <div class="app">
   <div class="lockscreen">
