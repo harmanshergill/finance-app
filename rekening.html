@@ -6,31 +6,39 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
 <meta name="format-detection" content="telephone=no,email=no,address=no">
 <title>Betaalrekening</title>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="topbar">Betaalrekening</div>
 
-<div class="saldo-blok">
-  <div class="groot">€ 100,97</div>
-  <div class="sub">Taj Restaurant<br>NL10 INGB 0007 6324 79</div>
-</div>
+<header class="header">
+  <h1>Betaalrekening</h1>
+</header>
 
-<div class="tx">
-  <div>
-    <strong>ODIDO</strong>
-    <span>Afschrijving</span>
+<section class="saldo-card">
+  <div class="saldo-amount">€ 100,97</div>
+  <div class="saldo-sub">
+    Taj Restaurant<br>
+    NL10 INGB 0007 6324 79
   </div>
-  <div class="min">-247,37</div>
-</div>
+</section>
 
-<div class="tx">
-  <div>
-    <strong>010 Storage</strong>
-    <span>Afschrijving</span>
+<section class="transactions">
+  <div class="tx-row">
+    <div>
+      <div class="tx-title">ODIDO</div>
+      <div class="tx-sub">Afschrijving</div>
+    </div>
+    <div class="tx-amount negative">-247,37</div>
   </div>
-  <div class="min">-468,15</div>
-</div>
+
+  <div class="tx-row">
+    <div>
+      <div class="tx-title">010 Storage</div>
+      <div class="tx-sub">Afschrijving</div>
+    </div>
+    <div class="tx-amount negative">-468,15</div>
+  </div>
+</section>
 
 </body>
 </html>

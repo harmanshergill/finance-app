@@ -3,30 +3,70 @@
  --orange:#ff7a00;
  --text:#1a1a1a;
  --sub:#7a7a7a;
- --border:#e6e6e6;
+ --line:#e6e6e6;
 }
+
 *{box-sizing:border-box}
-html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;background:#fff;color:var(--text)}
-.app{min-height:100dvh;display:flex;justify-content:center;align-items:center}
-.lockscreen,.loading{width:100%;max-width:420px;padding:32px 20px;display:flex;flex-direction:column;align-items:center}
-.logo-wrap{width:84px;height:84px;border-radius:22px;background:var(--orange);display:flex;align-items:center;justify-content:center;margin-bottom:24px}
-.logo-wrap.small{margin-bottom:16px}
-.logo-wrap img{width:64px;height:64px;object-fit:contain}
-.dots{display:flex;gap:12px;margin-bottom:28px}
-.dots span{width:12px;height:12px;border-radius:50%;border:2px solid var(--orange)}
-.dots span.filled{background:var(--orange)}
-.pad{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.pad button{height:64px;font-size:24px;background:none;border:1px solid #e0e0e0;border-radius:14px;color:var(--orange)}
-.spinner{width:36px;height:36px;border:4px solid #ffd1a8;border-top:4px solid var(--orange);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:12px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.topbar{height:56px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:600}
-.content{padding:16px}
-.rekening{background:#fff;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.rekening:active{background:#f5f5f5}
-.arrow{color:var(--orange);font-size:20px}
-.sub{color:var(--sub)}
-.saldo-blok{padding:20px;border-bottom:1px solid var(--border)}
-.saldo-blok .groot{font-size:30px;font-weight:600}
-.tx{padding:16px;display:flex;justify-content:space-between;border-bottom:1px solid var(--border)}
-.tx span{color:var(--sub);font-size:13px}
-.min{color:#c62828;font-weight:600}
+
+html,body{
+ margin:0;
+ font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
+ background:#fff;
+ color:var(--text);
+}
+
+header.header{
+ height:56px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-weight:600;
+ border-bottom:1px solid var(--line);
+}
+
+.saldo-card{
+ padding:20px;
+ border-bottom:1px solid var(--line);
+}
+
+.saldo-amount{
+ font-size:32px;
+ font-weight:600;
+ margin-bottom:6px;
+}
+
+.saldo-sub{
+ color:var(--sub);
+ font-size:14px;
+ line-height:1.4;
+}
+
+.transactions{
+ padding:0 16px;
+}
+
+.tx-row{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:16px 0;
+ border-bottom:1px solid var(--line);
+}
+
+.tx-title{
+ font-weight:600;
+ margin-bottom:2px;
+}
+
+.tx-sub{
+ font-size:13px;
+ color:var(--sub);
+}
+
+.tx-amount{
+ font-weight:600;
+}
+
+.negative{
+ color:#c62828;
+}
