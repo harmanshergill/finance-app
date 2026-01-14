@@ -1,72 +1,21 @@
-
-:root{
- --orange:#ff7a00;
- --text:#1a1a1a;
- --sub:#7a7a7a;
- --line:#e6e6e6;
+body{
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
+  margin:0;
+  background:#fff;
+  color:#000;
 }
-
-*{box-sizing:border-box}
-
-html,body{
- margin:0;
- font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
- background:#fff;
- color:var(--text);
+.title{
+  font-size:28px;
+  font-weight:600;
+  margin:20px;
 }
-
-header.header{
- height:56px;
- display:flex;
- align-items:center;
- justify-content:center;
- font-weight:600;
- border-bottom:1px solid var(--line);
+.card{
+  margin:16px;
+  padding:16px;
+  border-radius:12px;
+  background:#f7f7f7;
 }
-
-.saldo-card{
- padding:20px;
- border-bottom:1px solid var(--line);
-}
-
-.saldo-amount{
- font-size:32px;
- font-weight:600;
- margin-bottom:6px;
-}
-
-.saldo-sub{
- color:var(--sub);
- font-size:14px;
- line-height:1.4;
-}
-
-.transactions{
- padding:0 16px;
-}
-
-.tx-row{
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:16px 0;
- border-bottom:1px solid var(--line);
-}
-
-.tx-title{
- font-weight:600;
- margin-bottom:2px;
-}
-
-.tx-sub{
- font-size:13px;
- color:var(--sub);
-}
-
-.tx-amount{
- font-weight:600;
-}
-
-.negative{
- color:#c62828;
+.account{
+  font-size:18px;
+  color:#333;
 }
