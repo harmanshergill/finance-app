@@ -1,15 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bankieren</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Overzicht</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="title">Betaalrekening</h1>
-<div class="card">
-  <div class="account">Taj Restaurant</div>
-</div>
+<header class="topbar">Overzicht</header>
+
+<main class="container">
+  <div class="rekening-kaart" onclick="location.href='rekening.html'">
+    <div class="kaart-links">
+      <div class="kaart-titel">Betaalrekening</div>
+      <div class="kaart-sub">Taj Restaurant</div>
+    </div>
+    <div class="kaart-pijl">›</div>
+  </div>
+</main>
 </body>
 </html>
