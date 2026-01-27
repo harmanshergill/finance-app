@@ -11,30 +11,165 @@
 <header class="topbar">Betaalrekening</header>
 
 <section class="saldo">
-  <div class="saldo-bedrag" id="saldo">€ 1.652,14</div>
+  <div class="saldo-bedrag" id="saldo">€ 912,00</div>
   <div class="saldo-sub">Taj Restaurant<br>NL10 INGB 0007 6324 79</div>
 </section>
 
 <section class="date-card">
+  <div class="date">27 januari 2026</div>
+
+  <div class="row">
+    <div>
+      <strong>Takeaway.com</strong>
+      <div class="row-sub">Bijschrijving</div>
+    </div>
+    <div class="pos">+2.350,00</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>HES Finance</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-275,00</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>HES Finance</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-275,00</div>
+  </div>
+</section>
+
+<section class="date-card">
+  <div class="date">22 januari 2026</div>
+
+  <div class="row">
+    <div>
+      <strong>Harmony insurances</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-13,95</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>Nationale Nederlanden</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-284,50</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>Evides</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-19,00</div>
+  </div>
+</section>
+
+<section class="date-card">
+  <div class="date">20 januari 2026</div>
+
+  <div class="row">
+    <div>
+      <strong>FIDUSNL BV</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-223,33</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>SNELSTART SOFTWARE</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-17,55</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>SIDHU FOOD B.V</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-356,05</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>SIDHU FOOD B.V</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-495,92</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>The Fork</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-39,32</div>
+  </div>
+</section>
+
+<section class="date-card">
   <div class="date">19 januari 2026</div>
-  <div class="row" data-amount="334.19"><strong>UBER EATS LIMITED</strong><div class="pos">+334,19</div></div>
-  <div class="row" data-amount="354.63"><strong>FOODTICKET B.V</strong><div class="pos">+354,63</div></div>
-  <div class="row" data-amount="2180.77"><strong>TAKEAWAY.COM</strong><div class="pos">+2.180,77</div></div>
+
+  <div class="row">
+    <div>
+      <strong>UBER EATS LIMITED</strong>
+      <div class="row-sub">Bijschrijving</div>
+    </div>
+    <div class="pos">+334,19</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>FOODTICKET B.V</strong>
+      <div class="row-sub">Bijschrijving</div>
+    </div>
+    <div class="pos">+354,63</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>TAKEAWAY.COM</strong>
+      <div class="row-sub">Bijschrijving</div>
+    </div>
+    <div class="pos">+2.180,77</div>
+  </div>
 </section>
 
 <section class="date-card">
   <div class="date">12 januari 2026</div>
-  <div class="row" data-amount="-247.37"><strong>ODIDO</strong><div class="neg">-247,37</div></div>
-  <div class="row" data-amount="-501.93"><strong>JODIKA DRYPACK</strong><div class="neg">-501,93</div></div>
-  <div class="row" data-amount="-468.15"><strong>010 Storage</strong><div class="neg">-468,15</div></div>
+
+  <div class="row">
+    <div>
+      <strong>ODIDO</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-247,37</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>JODIKA DRYPACK</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-501,93</div>
+  </div>
+
+  <div class="row">
+    <div>
+      <strong>010 Storage</strong>
+      <div class="row-sub">Afschrijving</div>
+    </div>
+    <div class="neg">-468,15</div>
+  </div>
 </section>
 
-<script>
-(()=>{
- let t=0;
- document.querySelectorAll('.row').forEach(r=>t+=parseFloat(r.dataset.amount));
- document.getElementById('saldo').innerText='€ '+t.toLocaleString('nl-NL',{minimumFractionDigits:2});
-})();
-</script>
 </body>
 </html>
