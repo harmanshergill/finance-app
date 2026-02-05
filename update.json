@@ -1,0 +1,15 @@
+{
+  "transacties_update": [
+    {
+      "datum": "04 februari 2026",
+      "omschrijving": "TAKEAWAY.COM",
+      "bedrag": "+2852.00",
+      "type": "bijschrijving",
+      "applies_to": [
+        "lijst",
+        "detail",
+        "saldo"
+      ]
+    }
+  ]
+}
